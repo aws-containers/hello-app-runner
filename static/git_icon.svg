@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>git_icon_padding</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ar-hello-world-v3-git" transform="translate(-289.000000, -736.000000)">
+            <g id="git_icon_padding" transform="translate(289.000000, 736.000000)">
+                <rect id="Rectangle" x="0" y="0" width="88" height="88"></rect>
+                <path d="M39.3991251,18.9836489 L30.3011454,18.9836489 L39.3991251,18.9836489 L39.3991251,18.9836489 Z" id="Rectangle" stroke="#527FFF" stroke-width="2" transform="translate(34.850135, 18.983649) rotate(45.000000) translate(-34.850135, -18.983649) "></path>
+                <line x1="57.3700577" y1="36.4203102" x2="47.4705627" y2="36.4203102" id="Rectangle" stroke="#527FFF" stroke-width="2" transform="translate(52.420310, 36.420310) rotate(45.000000) translate(-52.420310, -36.420310) "></line>
+                <circle id="Oval" stroke="#527FFF" stroke-width="2" stroke-linejoin="round" transform="translate(44.133514, 27.133514) rotate(-180.000000) translate(-44.133514, -27.133514) " cx="44.1335137" cy="27.1335137" r="7.5"></circle>
+                <circle id="Oval" stroke="#527FFF" stroke-width="2" stroke-linejoin="round" transform="translate(61.133514, 44.133514) rotate(-180.000000) translate(-61.133514, -44.133514) " cx="61.1335137" cy="44.1335137" r="7.5"></circle>
+                <circle id="Oval-Copy" stroke="#527FFF" stroke-width="2" stroke-linejoin="round" transform="translate(44.133514, 61.133514) rotate(-180.000000) translate(-44.133514, -61.133514) " cx="44.1335137" cy="61.1335137" r="7.5"></circle>
+                <line x1="44.1335137" y1="33.6335137" x2="44.1335137" y2="53.6335137" id="Path-3" stroke="#527FFF" stroke-width="2"></line>
+                <rect id="Rectangle" stroke="#FFFFFF" stroke-width="2" transform="translate(44.133514, 44.133514) rotate(45.000000) translate(-44.133514, -44.133514) " x="14.6335137" y="14.6335137" width="59" height="59" rx="9"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

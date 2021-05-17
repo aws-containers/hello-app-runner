@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+py-avataaars = "*"
+pillow = "*"
+requests = "*"
+starlette = "*"
+uvicorn = "*"
+starlette-exporter = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
