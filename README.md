@@ -3,7 +3,7 @@
 ![](/static/banner_sample.png)
 
 This is a example web service for [AWS App Runner](https://aws.amazon.com/apprunner/).
-You can use this repo to automatically build and deploy or use pre-built images at `gallery.ecr.aws/aws-containers/hello-app-runner`.
+You can use this repo to automatically build and deploy or use pre-built images at [ECR Public](https://gallery.ecr.aws/aws-containers/hello-app-runner).
 
 You can read about AWS App Runner in the [launch blog](https://aws.amazon.com/blogs/containers/introducing-aws-app-runner/)
 
@@ -15,7 +15,7 @@ If you want to deploy this container make sure you have the latest release of th
 SERVICE_NAME=hello-app-runner
 
 cat > hello-app-runner.yaml <<EOF
-ServiceName: $SERVICE_NAME
+ServiceName: ${SERVICE_NAME}
 SourceConfiguration:
   ImageRepository:
     ImageIdentifier: "public.ecr.aws/aws-containers/hello-app-runner:latest"
