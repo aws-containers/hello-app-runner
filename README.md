@@ -15,7 +15,6 @@ If you want to deploy this container make sure you have the latest release of th
 SERVICE_NAME=hello-app-runner
 
 cat > hello-app-runner.yaml <<EOF
-ServiceName: ${SERVICE_NAME}
 SourceConfiguration:
   ImageRepository:
     ImageIdentifier: "public.ecr.aws/aws-containers/hello-app-runner:latest"
@@ -25,7 +24,8 @@ SourceConfiguration:
   AutoDeploymentsEnabled: false
 EOF
 
-aws apprunner create-service --cli-input-yaml file://hello-app-runner.yaml
+aws apprunner create-service --service-name ${SERVICE_NAME} \
+    --source-configuration file://hello-app-runner.yaml
 ```
 
 ## Features
