@@ -19,5 +19,5 @@ Open it in your browser at {{host_url}}
 Open it in your browser at {{host_url|replace('http:', 'https:')}}
 {% endif %}
 Try the workshop at https://apprunnerworkshop.com
-Read the docs at https://aws.amazon.com/apprunner
+Read the docs at https://docs.aws.amazon.com/apprunner
 
