@@ -5,7 +5,7 @@ Description: CloudFormation template that deploys hello-app-runner app
 Resources:
   Service:
     Metadata:
-      'hello-app-runner example service'
+      'aws:apprunner:description': 'hello-app-runner example service'
     Type: AWS::AppRunner::Service
     Properties:
       ServiceName: hello-app-runner
@@ -16,3 +16,7 @@ Resources:
           ImageRepositoryType: ECR_PUBLIC
           ImageConfiguration:
             Port: 8000
+Outputs:
+  Endpoint:
+    Description: "The endpoint of the App Runner service."
+    Value: !GetAtt Service.ServiceUrl
