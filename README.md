@@ -15,12 +15,16 @@ If you want to deploy this container make sure you have the latest release of th
 SERVICE_NAME=hello-app-runner
 
 cat > hello-app-runner.yaml <<EOF
-ImageRepository:
-  ImageIdentifier: public.ecr.aws/aws-containers/hello-app-runner:latest
-  ImageConfiguration:
-    Port: '8000'
-  ImageRepositoryType: ECR_PUBLIC
-AutoDeploymentsEnabled: false
+{
+    "ImageRepository": {
+        "ImageIdentifier": "public.ecr.aws/aws-containers/hello-app-runner:latest",
+        "ImageConfiguration": {
+            "Port": "8000"
+        },
+        "ImageRepositoryType": "ECR_PUBLIC"
+    },
+    "AutoDeploymentsEnabled": false
+}
 EOF
 
 aws apprunner create-service --service-name ${SERVICE_NAME} \
