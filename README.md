@@ -14,7 +14,7 @@ If you want to deploy this container make sure you have the latest release of th
 ```bash
 SERVICE_NAME=hello-app-runner
 
-cat > hello-app-runner.yaml <<EOF
+cat > hello-app-runner.json <<EOF
 {
     "ImageRepository": {
         "ImageIdentifier": "public.ecr.aws/aws-containers/hello-app-runner:latest",
@@ -28,7 +28,7 @@ cat > hello-app-runner.yaml <<EOF
 EOF
 
 aws apprunner create-service --service-name ${SERVICE_NAME} \
-    --source-configuration file://hello-app-runner.yaml
+    --source-configuration file://hello-app-runner.json
 ```
 
 ## Features
