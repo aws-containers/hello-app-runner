@@ -2,13 +2,18 @@
 # SPDX-License-Identifier: Apache-2.0
 AWSTemplateFormatVersion: 2010-09-09
 Description: CloudFormation template that deploys hello-app-runner app
+Parameters:
+  ServiceName:
+    Type: String
+    Default: hello-app-runner
+    Description: Name for your App Runner service.
 Resources:
   Service:
     Metadata:
       'aws:apprunner:description': 'hello-app-runner example service'
     Type: AWS::AppRunner::Service
     Properties:
-      ServiceName: hello-app-runner
+      ServiceName: !Ref ServiceName
       SourceConfiguration:
         AutoDeploymentsEnabled: false
         ImageRepository:
