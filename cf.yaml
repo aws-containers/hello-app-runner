@@ -1,0 +1,27 @@
+# Copyright Amazon.com Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: Apache-2.0
+AWSTemplateFormatVersion: 2010-09-09
+Description: CloudFormation template that deploys hello-app-runner app
+Parameters:
+  ServiceName:
+    Type: String
+    Default: hello-app-runner
+    Description: Name for your App Runner service.
+Resources:
+  Service:
+    Metadata:
+      'aws:apprunner:description': 'hello-app-runner example service'
+    Type: AWS::AppRunner::Service
+    Properties:
+      ServiceName: !Ref ServiceName
+      SourceConfiguration:
+        AutoDeploymentsEnabled: false
+        ImageRepository:
+          ImageIdentifier: public.ecr.aws/aws-containers/hello-app-runner:latest
+          ImageRepositoryType: ECR_PUBLIC
+          ImageConfiguration:
+            Port: 8000
+Outputs:
+  Endpoint:
+    Description: "The endpoint of the App Runner service."
+    Value: !GetAtt Service.ServiceUrl
