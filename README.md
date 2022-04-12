@@ -31,6 +31,14 @@ aws apprunner create-service --service-name ${SERVICE_NAME} \
     --source-configuration file://hello-app-runner.json
 ```
 
+If you want to deploy and manage this container using AWS CloudFormation just run
+
+```bash
+SERVICE_NAME=hello-app-runner
+
+aws cloudformation create-stack --template-body file://cf.yaml --stack-name ${SERVICE_NAME} --parameters "ParameterKey=ServiceName,ParameterValue=${SERVICE_NAME}"
+```
+
 ## Features
 
 The service exposes a basic splash page with links to relevant App Runner content.
