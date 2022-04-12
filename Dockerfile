@@ -11,9 +11,12 @@ COPY . /srv
 
 RUN yum update -y \
     && amazon-linux-extras enable python3.8 \
+    && yum groupinstall -y "Development tools" \
     && yum install -y \
+	       python38-devel \
            pycairo \
-           python3.8 \
+           python38 \
+           libffi-devel \
     && python3.8 -m pip install pip --upgrade \
     && ln -s /usr/local/bin/pip3 /usr/bin/pip3 \
     && ln -s /usr/bin/pydoc3.8 /usr/local/bin/pydoc \
