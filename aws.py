@@ -8,7 +8,8 @@ from datetime import datetime
 import os
 
 logger = logging.getLogger(__name__)
-dynamoDB=boto3.resource('dynamodb',aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'])
+#dynamoDB=boto3.resource('dynamodb',aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'])
+dynamoDB=boto3.resource('dynamodb')
 yearSeconds=365 * 24 * 3600
 def getUser(id, name):
     usrTable = dynamoDB.Table('User') 
