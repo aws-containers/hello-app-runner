@@ -14,6 +14,7 @@ from json import loads, dumps
 from requests import get
 from os import getenv, urandom, path, environ
 from PIL import Image
+import aws
 
 templates = Jinja2Templates(directory='templates')
 
@@ -147,7 +148,7 @@ def index(request):
     else:
         if not global_state["INITIALIZED"]:
             _setup(request)
-        return templates.TemplateResponse('index.html', {'request': request})
+        return templates.TemplateResponse('index.html', {'request': request, 'blogs':  aws.scanBlogs()})
 
 def headers(request):
     return JSONResponse(dumps({k:v for k, v in request.headers.items()}))
