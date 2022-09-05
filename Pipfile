@@ -10,6 +10,7 @@ requests = "*"
 starlette = "*"
 uvicorn = "*"
 starlette-exporter = "*"
+boto3 = "*"
 
 [dev-packages]
 
