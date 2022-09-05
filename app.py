@@ -1,4 +1,4 @@
-import py_avataaars
+#import py_avataaars
 import random, logging, sys
 import uvicorn
 
@@ -13,7 +13,7 @@ from starlette_exporter import PrometheusMiddleware, handle_metrics
 from json import loads, dumps
 from requests import get
 from os import getenv, urandom, path, environ
-from PIL import Image
+#from PIL import Image
 import aws
 
 templates = Jinja2Templates(directory='templates')
@@ -24,7 +24,7 @@ global_state = {
 
 logging.basicConfig(stream=sys.stdout, level=eval('logging.' + getenv('LOG_LEVEL', 'INFO')))
 logging.debug('Log level is set to DEBUG.')
-
+'''
 # Generate and save a local avatar image
 def generate_avatar_image():
     logging.info('Generating avatar image')
@@ -127,16 +127,18 @@ def generate_social_card(avatar_file):
         background.save('./static/social.png')
     except Exception as e:
         logging.ERROR('Could not save twitter banner with error: %s', e)
-
+'''
 def homepage(request):
     return PlainTextResponse('Hello, world!')
 
 def _setup(request):
+    '''
     random.seed(str(request.url))
     if not path.isfile('avatar.png'):
         generate_avatar_image()
     if not path.isfile('./static/social.png'):
         generate_social_card('avatar.png')
+    '''
     global_state["INITIALIZED"] = True
 
 def index(request):
