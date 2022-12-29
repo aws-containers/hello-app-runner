@@ -21,7 +21,7 @@ global_state = {
     "INITIALIZED": False
 }
 
-logging.basicConfig(stream=sys.stdout, level=eval('logging.' + getenv('LOG_LEVEL', 'INFO')))
+logging.basicConfig(stream=sys.stdout, level=getenv('LOG_LEVEL', 'INFO').upper())
 logging.debug('Log level is set to DEBUG.')
 
 # Generate and save a local avatar image
