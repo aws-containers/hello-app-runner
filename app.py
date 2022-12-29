@@ -75,21 +75,21 @@ def generate_avatar_image():
         return random.choice(list(enum_))
 
     # Make a random customization selection from custom arrays
-    def rc(customization, array):
-        return eval("py_avataaars." + customization + "." +  random.choice(array))
+    def rc(enum_, array):
+        return enum_[random.choice(array)]
 
     avatar = py_avataaars.PyAvataaar(
         style=py_avataaars.AvatarStyle.CIRCLE,
-        background_color=rc("Color", custom_circle_colors),
+        background_color=rc(py_avataaars.Color, custom_circle_colors),
         skin_color=r(py_avataaars.SkinColor),
         hair_color=r(py_avataaars.HairColor),
         facial_hair_type=r(py_avataaars.FacialHairType),
         facial_hair_color=r(py_avataaars.HairColor),
         top_type=r(py_avataaars.TopType),
         hat_color=r(py_avataaars.Color),
-        mouth_type=rc("MouthType", custom_mouth_types),
-        eye_type=rc("EyesType", custom_eye_types),
-        eyebrow_type=rc("EyebrowType", custom_eyebrow_types),
+        mouth_type=rc(py_avataaars.MouthType, custom_mouth_types),
+        eye_type=rc(py_avataaars.EyesType, custom_eye_types),
+        eyebrow_type=rc(py_avataaars.EyebrowType, custom_eyebrow_types),
         nose_type=r(py_avataaars.NoseType),
         accessories_type=r(py_avataaars.AccessoriesType),
         clothe_type=r(py_avataaars.ClotheType),
